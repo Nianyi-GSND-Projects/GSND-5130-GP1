@@ -17,7 +17,7 @@ In this project, we are required to perform a qualitative research.
 	- The research proposal is being drafted.
 	Alex could help design the interviewing process.
 
-- By 09/29, we should be completing the first half of the research thesis (see [description on Canvas](https://github.com/WangNianyi2001))—the Abstract, Related Work and Method sections.
+- By 09/29, we should be completing the first half of the research thesis (see [description on Canvas](https://northeastern.instructure.com/courses/193792/assignments/2435456))—the Abstract, Related Work and Method sections.
 
 	- By this time, the data collection should have already begun.
 
