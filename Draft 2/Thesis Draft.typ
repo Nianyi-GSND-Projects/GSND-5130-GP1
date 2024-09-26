@@ -1,16 +1,19 @@
-#set page(paper: "us-letter")
+#set page(paper: "us-letter", margin: 0.8in)
 #set par(justify: true)
 #let _lorem(n) = {
 	set text(fill: gray);
 	lorem(n);
 }
+#set text(font: "Times New Roman")
 #set heading(numbering: "1.1.1.")
 
 #let title = "[title placeholder]"
 #{
-	set align(center)
-	set text(size: 17pt, weight: "bold")
-	title
+	set align(left);
+	set text(size: 20pt, weight: "bold");
+	v(1em);
+	title;
+	v(1em);
 }
 
 #heading(numbering: none)[Abstract]
@@ -51,6 +54,7 @@ Research will be conducted through qualitative interviews.
 
 ]
 
+#show bibliography: set text(size: 9pt);
 #bibliography("bibliography.bib",
 	full: true,
 	style: "ieee"
@@ -67,6 +71,7 @@ Research will be conducted through qualitative interviews.
 #let tnocounter = counter("tno")
 #let tno() = { context tnocounter.display(); tnocounter.step(); }
 #let notable(..args) = { tnocounter.update(1); table(..args); }
+#show table: set text(size: 10pt);
 
 #show figure: set block(breakable: true)
 
