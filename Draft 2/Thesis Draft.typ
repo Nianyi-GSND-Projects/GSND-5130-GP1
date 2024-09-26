@@ -23,11 +23,14 @@
 
 #heading(numbering: none)[Abstract]
 
-_Minecraft_ is a survival video game in which players traverse through a blocky world crafting materials, mining for resources, and fighting monsters.
-This research piece explores the reasons why _Minecraft_ players choose to create new worlds instead of continuing precious saves.
-We will be looking at this question through a game design lens, examining what mechanics and aspects of the game encourage or discourage players to abandon previous worlds and create new ones.
-Research will be conducted through qualitative interviews.
-#_lorem(30)
+The 2011 video game, _Minecraft_, has successfully started a craze across the globe.
+Due to its nature as a sandbox game, _Minecraft_ is able to offer players extensive creative liberties to build their dream world.
+However, although it's possible to keep playing in a single world, it's a common phenomenon that many players experience rapid fatigue with the worlds they are currently playing, leading to a cyclical behavior of creating new worlds.
+This research aims to find the causes of this phenomenon via qualitative methods.
+A preliminary online survey will be conducted to verify the existence of this phenomenon.
+The survey will examine players' gaming habits and routines, collected data of which will be analyzed to filter out participants exhibiting the described behavior.
+Interviews will then be conducted with consenting players from this subset.
+Lastly, the results will be coded and discussed to reveal the crucial causes of the phenomenon.
 
 #v(1em)
 // #outline()
