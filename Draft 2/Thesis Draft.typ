@@ -6,6 +6,11 @@
 }
 #set text(font: "Times New Roman")
 #set heading(numbering: "1.1.1.")
+#let heading1size = 15pt;
+#let resetheadingsize() = {
+	show heading.where(level: 1): set text(size: heading1size);
+}
+#resetheadingsize();
 
 #let title = "[title placeholder]"
 #{
@@ -54,11 +59,14 @@ Research will be conducted through qualitative interviews.
 
 ]
 
-#show bibliography: set text(size: 9pt);
-#bibliography("bibliography.bib",
-	full: true,
-	style: "ieee"
-)
+#{
+	set text(size: 10pt);
+	resetheadingsize();
+	[#bibliography("bibliography.bib",
+		full: true,
+		style: "ieee"
+	)]
+}
 
 #set heading(numbering: (..numbers) => {
 	numbers = numbers.pos();
