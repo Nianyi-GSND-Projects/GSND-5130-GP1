@@ -8,6 +8,13 @@
 	set text(style: "italic");
 	[\[#it\]];
 }
+#let figureplaceholder(height) = box(
+	width: 100%, height: height,
+	stroke: black,
+)[
+	#set align(center + horizon)
+	placeholder
+]
 
 #set page(paper: "us-letter", margin: 0.8in)
 #set par(justify: true)
@@ -42,7 +49,7 @@ Subsequent in-depth interviews were conducted with representative samples to gat
 The final analysis reveals the distribution and underlying causes of this phenomenon.
 Our study examines the "2-week Minecraft phase" from psychological and social aspects, providing valuable insights for game developers seeking to enhance long-term player engagement and satisfaction.
 
-*Keywords:* Minecraft, Game psychology, Qualitative research, Cyclical engagement pattern
+*Keywords:* Minecraft, Game psychology, Cyclical engagement pattern
 
 #v(1em)
 // #outline()
@@ -50,6 +57,8 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 #columns(2)[
 	= Introduction
+
+	#banner[Introduction as well as the Related Work section, as there is barely any academical literature on the topic.]
 
 	#banner[This section is written with a highly informal tone and needs to be polished.];
 
@@ -84,13 +93,7 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 	Data from _Google Trends_ (@fig:google-trend-data) shows that starting from September 2024, the phenomenon has gone into the public's eyesight.
 
 	#figure(
-		box(
-			width: 100%, height: 8em,
-			stroke: black,
-		)[
-			#set align(center + horizon)
-			placeholder
-		],
+		figureplaceholder(8em),
 		caption: [Search count of _"Minecraft Phase"_ over a month in the United States according to _Google Trends_.]
 	) <fig:google-trend-data>
 
@@ -106,12 +109,69 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	= Method
 
-	#banner[This section should be rewritten.];
+	The method used for this research is intended to be qualitative, but before diving directly into finding the causes, the research team wanted to validate the existence of the phenomenon and the size of the popularity affected by it.
+	To do that, it is the best to a quantitative method.
 
-	- We will be utilizing a survey first in order to gain a baseline idea of how players feel about the concept of starting new worlds, to see how common it is, and what types of players restart their worlds more often than others.
+	== Pilot Survey
 
-	- We will follow these surveys with in-depth interviews in order to gain a more personal and qualitative idea about how players feel about starting new worlds.
+	The validation is realised via an online survey towards a collection of _Minecraft_ players.
+	The survey questions consist of non-private information related to players' experience with _Minecraft_, including how long they have been playing the game, how frequently they create new worlds, what modes they play the most, what negative feelings have the game caused on them, etc.
+	There are two purposes for this pilot survey:
 
+	- To find the distribution of players' engagement duration towards worlds to validate if the 2-week phase really exists.
+	- To collect a sample base that could be filtered and used for the later interview stage.
+
+	A table of survey questions could be found in the appendix section (@table:survey-questions).
+
+	== Interview
+
+	#banner[This section is to be finished.]
+
+	After the survey data is collected, it is possible to analyze it and filter out a subset of players who have strong resonance with the phenomenon.
+	The research team then conduct one-to-one interviews with these selected players.
+	The interviews could either be online or in-person.
+
+	The main purpose of the interview stage is to find out the causes of the phenomenon by gathering subjective experiences from individual samples.
+	The gathered data is then be transcribed, coded, grouped into categories, analyzed and discussed.
+
+	A table of interview questions could be found in the appendix section (@table:interview-questions).
+
+	#banner[The criteria for choosing the interviewees needs to be justified and clarified.]
+
+	= Distribution analysis
+
+	#banner[This section shows the result of the pilot survey. To be finished.]
+
+	#_lorem(40)
+
+	#_lorem(30)
+
+	#figure(
+		figureplaceholder(8em),
+		caption: [Aye aye, caption!]
+	)
+
+	#_lorem(70)
+
+	= Interview Results
+
+	#banner[This section shows the result of the interviews. To be finished.]
+
+	#_lorem(150)
+
+	- #_lorem(10)
+	- #_lorem(17)
+	- #_lorem(15)
+
+	#_lorem(100)
+
+	= Conclusion
+
+	[To be finished.]
+
+	= Discussion
+
+	[To be finished.]
 ]
 
 #{
