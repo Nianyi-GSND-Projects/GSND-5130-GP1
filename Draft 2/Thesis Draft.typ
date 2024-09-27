@@ -1,9 +1,17 @@
+#let draft(it) = {
+	set text(fill: gray);
+	it;
+}
+#let _lorem(n) = draft(lorem(n))
+#let banner(it) = {
+	set align(center);
+	set text(style: "italic");
+	[\[#it\]];
+}
+
 #set page(paper: "us-letter", margin: 0.8in)
 #set par(justify: true)
-#let _lorem(n) = {
-	set text(fill: gray);
-	lorem(n);
-}
+
 #set text(font: "Times New Roman")
 #set heading(numbering: "1.1.1.")
 #let heading1size = 15pt;
@@ -11,11 +19,12 @@
 	show heading.where(level: 1): set text(size: heading1size);
 }
 #resetheadingsize();
+#set cite(style: "alphanumeric")
 
-#let title = "[title placeholder]"
+#let title = [Examining "2-week Minecraft Phase": The Cyclical Engagement Patterns in Sandbox Gaming]
 #{
 	set align(left);
-	set text(size: 20pt, weight: "bold");
+	set text(size: 19pt, weight: "bold");
 	v(1em);
 	title;
 	v(1em);
@@ -23,14 +32,17 @@
 
 #heading(numbering: none)[Abstract]
 
-The 2011 video game, _Minecraft_, has successfully started a craze across the globe.
-Due to its nature as a sandbox game, _Minecraft_ is able to offer players extensive creative liberties to build their dream world.
-However, although it's possible to keep playing in a single world, it's a common phenomenon that many players experience rapid fatigue with the worlds they are currently playing, leading to a cyclical behavior of creating new worlds.
-This research aims to find the causes of this phenomenon via qualitative methods.
-A preliminary online survey will be conducted to verify the existence of this phenomenon.
-The survey will examine players' gaming habits and routines, collected data of which will be analyzed to filter out participants exhibiting the described behavior.
-Interviews will then be conducted with consenting players from this subset.
-Lastly, the results will be coded and discussed to reveal the crucial causes of the phenomenon.
+The 2011 video game, _Minecraft_, has sparked a craze across the globe.
+Due to its nature as a sandbox game, _Minecraft_ offers players extensive creative liberties to build their dream world.
+However, a peculiar yet common phenomenon is observed among many _Minecraft_ players:
+A cyclical pattern of fatigue with the worlds they are currently playing, usually within a range of 2 weeks.
+This phenomenon, colloquially referred to as the "2-week Minecraft phase", remains largely unstudied in academic literature.
+To investigate this occurrence, we conducted a pilot survey among Minecraft players to assess its prevalence.
+Subsequent in-depth interviews were conducted with representative samples to gather more nuanced insights.
+The final analysis reveals the distribution and underlying causes of this phenomenon.
+Our study examines the "2-week Minecraft phase" from psychological and social aspects, providing valuable insights for game developers seeking to enhance long-term player engagement and satisfaction.
+
+*Keywords:* Minecraft, Game psychology, Qualitative research, Cyclical engagement pattern
 
 #v(1em)
 // #outline()
@@ -39,22 +51,62 @@ Lastly, the results will be coded and discussed to reveal the crucial causes of 
 #columns(2)[
 	= Introduction
 
-	Released in 2011, Minecraft is one of the most popular video games of all time. The gameplay revolves around the player surviving in a procedurally-generated wilderness.
-	Players
+	#banner[This section is written with a highly informal tone and needs to be polished.];
 
-	#_lorem(200)
+	_Minecraft_, the video game released by the Swedish game company _Mojang Studios_ in 2011, has achieved a great success in the global game market.
+	Being a sandbox game, its internal freedom grants the players unlimited possibilities to build their dream world virtually.
+	Starting from the most basic element of the game, blocks, countless styles of game play have been adopted by players of all kind.
+	Because the game mechanic itself doesn't limit players' actions, players could have full control of what they would do in a game world.
 
-	= Related Work
+	Although a highly free mechanic would theoretically allow unlimited playing with in a single game world, many _Minecraft_ players would usually experience a boredom towards the world they're currently playing, then either stop playing the game or turn to a new world, leading to a cyclical engagement pattern.
+	This experience is shared by players from worldwide, but hasn't been discussed widely in the public.
+	
+	In March 2024, user "Legitimate-Bath-9651" made a post on _Reddit_ @Leg24, stating the experience publicly and giving five possible reasons behind this cyclical fatigue:
 
-	#_lorem(300)
+	- Novelty: Players like the freshness of participating in new worlds, so the motivation is lost when a world gets old.
+	- Direction: The unsatisfied requirements (like mining, building a shelter) push players to play; when the game comes to the ending stage, all requirements are either fulfilled or automated, so players become aimless.
+	- Attrition (multiplayer): When a player stops playing, more players would tend to follow.
+	- Activity difference (multiplayer): Players at different engagement level would have different developing pace. Slower players may feel detached with the rest of the world.
+	- Differences in goals/directions (multiplayer): Players having different ideas for progression may drift away from each other, eventually losing motivation to play as a part of the world.
 
-	#colbreak()
+	The post has lit up a mild but not strong discussion among other _Reddit_ users, sharing their views and solutions on/to the experience.
+
+	In the title of the post, the phrase _"2-week Minecraft Phase"_ is used.
+	It is necessary to mention that this is not the first time the phrase _"Minecraft Phase"_ has appeared on the Internet.
+	Earlier in February 2023, user "gawkgawkcumsock" has created the entry _"minecraft phase"_ on _Urban Dictionary_ @gaw23, but its meaning was defined as _"the annual 2 week phase of the minecraft grind that most people find themselves stuck in"_, a bit off from the definition in the later _Reddit_ post.
+	Back to an even earlier stage of years ago, the exact same phenomenon has been brought up occationally on the _Minecraft_ _subreddit_, but without the now-coined term.
+
+	Later in July 2024, _YouTube_ content creator "niko" made video with title _"The 2 Week Minecraft Phase Explained"_ @nik24.
+	The title is somehow ambiguous, as the video only explained _what_ is the _2-week Minecraft Phase_, but not _why it occurs_.
+	The video became a hit, furtherly pushing the concept to a wider range of the _Minecraft_ community.
+	By the end of September 2024, the video has gained over 1.3M clicks.
+
+	Data from _Google Trends_ (@fig:google-trend-data) shows that starting from September 2024, the phenomenon has gone into the public's eyesight.
+
+	#figure(
+		box(
+			width: 100%, height: 8em,
+			stroke: black,
+		)[
+			#set align(center + horizon)
+			placeholder
+		],
+		caption: [Search count of _"Minecraft Phase"_ over a month in the United States according to _Google Trends_.]
+	) <fig:google-trend-data>
+
+	Up to October 2024, no research studies has been conducted on this phenomenon yet, nor is there any academical literature.
+	So to introduce _"2-week Minecraft Phase"_ to the academic community, our team conducted a formal research to find out the causes of it.
+	
+	#banner[Brief intro of the research plan.]
+	#_lorem(50)
+	
+	#banner[Goals of the research.]
+	#_lorem(30)
+
+
 	= Method
 
-	#{
-		set align(center)
-		[\[This paragraph needs to be rewritten.\]]
-	}
+	#banner[This section should be rewritten.];
 
 	- We will be utilizing a survey first in order to gain a baseline idea of how players feel about the concept of starting new worlds, to see how common it is, and what types of players restart their worlds more often than others.
 
