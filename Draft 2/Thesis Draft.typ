@@ -58,10 +58,6 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 #columns(2)[
 	= Introduction
 
-	#banner[Introduction as well as the Related Work section, as there is barely any academical literature on the topic.]
-
-	#banner[This section is written with a highly informal tone and needs to be polished.];
-
 	_Minecraft_, the video game released by the Swedish game company _Mojang Studios_ in 2011, has achieved a great success in the global game market.
 	Being a sandbox game, its internal freedom grants the players unlimited possibilities to build their dream world virtually.
 	Starting from the most basic element of the game, blocks, countless styles of game play have been adopted by players of all kind.
@@ -99,13 +95,6 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	Up to October 2024, no research studies has been conducted on this phenomenon yet, nor is there any academical literature.
 	So to introduce _"2-week Minecraft Phase"_ to the academic community, our team conducted a formal research to find out the causes of it.
-	
-	#banner[Brief intro of the research plan.]
-	#_lorem(50)
-	
-	#banner[Goals of the research.]
-	#_lorem(30)
-
 
 	= Method
 
@@ -125,7 +114,7 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	== Interview
 
-	#banner[This section is to be finished.]
+	#banner[The criteria for choosing the interviewees needs to be justified and clarified.]
 
 	After the survey data is collected, it is possible to analyze it and filter out a subset of players who have strong resonance with the phenomenon.
 	The research team then conduct one-to-one interviews with these selected players.
@@ -136,34 +125,13 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	A table of interview questions could be found in the appendix section (@table:interview-questions).
 
-	#banner[The criteria for choosing the interviewees needs to be justified and clarified.]
-
 	= Distribution analysis
 
-	#banner[This section shows the result of the pilot survey. To be finished.]
-
-	#_lorem(40)
-
-	#_lorem(30)
-
-	#figure(
-		figureplaceholder(8em),
-		caption: [Aye aye, caption!]
-	)
-
-	#_lorem(70)
+	#banner[To be finished.]
 
 	= Interview Results
 
-	#banner[This section shows the result of the interviews. To be finished.]
-
-	#_lorem(150)
-
-	- #_lorem(10)
-	- #_lorem(17)
-	- #_lorem(15)
-
-	#_lorem(100)
+	#banner[To be finished.]
 
 	= Conclusion
 
