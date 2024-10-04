@@ -1,8 +1,8 @@
-# GSND 5130 Group Work \#1
+# GSND 5130 Group Project \#1
 
-This README document is written and maintained by [Nianyi Wang](https://github.com/WangNianyi2001).
+This README document is written and maintained by [Nianyi Wang](https://github.com/WangNianyi2001/).
 
-Last updated: 09/26/2024
+Last updated: 10/03/2024
 
 ## Objectives
 
@@ -27,5 +27,7 @@ In this project, we are required to perform a qualitative research.
 	Later I will adapt the content into a more academical writing style.
 
 - **Presentation**: On 10/04, we need to do a presentation to the whole class about our research.
+
+	- The slides document is put on [Google Slides](https://docs.google.com/presentation/d/1QsN1yvKEjeLprA1B8YkzlKHm5Q_87yTDrgXO1tjbSNY/).
 
 - **Final Report**: By 10/13, we should finish and submit the final report thesis.
