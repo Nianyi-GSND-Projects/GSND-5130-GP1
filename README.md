@@ -2,7 +2,7 @@
 
 This README document is written and maintained by [Nianyi Wang](https://github.com/WangNianyi2001/).
 
-Last updated: 10/03/2024
+Last updated: 10/10/2024
 
 ## Objectives
 
@@ -23,7 +23,7 @@ In this project, we are required to perform a qualitative research.
 		- Alex could help design the interviewing process.
 
 	- Alex has made a draft on [Google Docs](https://docs.google.com/document/d/1fw_HNCFMxxFowANbz8vmtRvFRqIORqCO4FE3gH9We5E/edit#heading=h.hy6jzg8b99d).
-	I'm transcribing his work into [Typst](https://github.com/Nianyi-GSND-Projects/GSND-5130-GW1/blob/master/Draft%202/Thesis%20Draft.typ) (compiled PDF is [here](https://github.com/Nianyi-GSND-Projects/GSND-5130-GW1/blob/master/Draft%202/Thesis%20Draft.pdf)).
+	I'm transcribing his work into [Typst](https://github.com/Nianyi-GSND-Projects/GSND-5130-GW1/blob/master/Thesis/Thesis.typ) (compiled PDF is [here](https://github.com/Nianyi-GSND-Projects/GSND-5130-GW1/blob/master/Thesis/Thesis.pdf)).
 	Later I will adapt the content into a more academical writing style.
 
 - **Presentation**: On 10/04, we need to do a presentation to the whole class about our research.
