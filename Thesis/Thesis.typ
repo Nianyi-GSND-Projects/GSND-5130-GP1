@@ -1,13 +1,3 @@
-#let draft(it) = {
-	set text(fill: gray);
-	it;
-}
-#let _lorem(n) = draft(lorem(n))
-#let banner(it) = {
-	set align(center);
-	set text(style: "italic");
-	[\[#it\]];
-}
 #let figureplaceholder(height) = box(
 	width: 100%, height: height,
 	stroke: black,
@@ -23,13 +13,16 @@
 #set quote(block: true, quotes: true)
 
 #set text(font: "Times New Roman")
-#set heading(numbering: "1.1.1.")
+#set heading(numbering: "1.1.1")
+#show heading.where(level: 2): set heading(numbering: none)
+#show heading.where(level: 3): set heading(numbering: none)
 #let heading1size = 15pt;
 #let resetheadingsize() = {
 	show heading.where(level: 1): set text(size: heading1size);
 }
 #resetheadingsize();
 #set cite(style: "alphanumeric")
+#show link: set text(size: 0.9em, font: "Consolas")
 
 #let title = [Examining "2-week Minecraft Phase": The Cyclical Engagement Patterns in Sandbox Gaming]
 #{
@@ -37,7 +30,30 @@
 	set text(size: 19pt, weight: "bold");
 	v(1em);
 	title;
-	v(1em);
+}
+#{
+	set align(center);
+	let author(name: "", mail: "") = {
+		h(0.5em);
+		box()[
+			#text(style: "italic")[#name]
+			#parbreak()
+			#link("mailto:" + mail)[#mail]
+		];
+		h(0.5em);
+	}
+	author(
+		name: [Alexandra Vassilopoulos],
+		mail: "vassilopoulos.al@northeastern.edu",
+	);
+	author(
+		name: [Nianyi Wang],
+		mail: "wang.nian@northeastern.edu",
+	);
+	author(
+		name: [Shencheng Fu],
+		mail: "fu.shenc@northeastern.edu",
+	);
 }
 
 #heading(numbering: none)[Abstract]
@@ -92,14 +108,50 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 	Data from _Google Trends_ (@fig:google-trend-data) shows that starting from September 2024, the phenomenon has gone into the public's eyesight.
 
 	#figure(
-		figureplaceholder(8em),
+		placement: top,
+		outlined: true,
+		image("images/google-trends.jpg"),
 		caption: [Search count of _"Minecraft Phase"_ over a month in the United States according to _Google Trends_.]
 	) <fig:google-trend-data>
 
 	= Related Work
 
-	Up to October 2024, no research studies has been conducted on this phenomenon yet, nor is there any academical literature.
-	So to introduce _"2-week Minecraft Phase"_ to the academic community, our team conducted a formal research to find out the causes of it.
+	=== General Psychology
+
+	The fatigue of players' towards a certain video game is nothing new to the academical community.
+	_Bikas et al._'s work @BPDM22 has stated clearly that for most recreational activities, the physical fatigue caused by prolonged execution and the lacking of proper rest are usually not the cause of people quitting.
+	They furtherly stated that it is more of psychological factors.
+
+	One of the earliest research studying video game fatigue from a psychological approach was in 2007, where _Lee et al._ conducted a series of interviews on the reasons of players in Taiwan quitting MMORPGs @LYL07.
+	They concluded that the psychological factors that cause a player to quit a video game are never one-dimensional.
+	However, their research addresses the topic more as a problem of video game addiction that needs to be solved, instead of treating it as an objective phenomenon.
+
+	Strååt and Verhagen's work @SV18 has traced a group of players playing an AAA video game for 20 hours, and has done longitudinal case studies to invesigate the change on their experience towards the game.
+	They then concluded several retention inhibiting factors that could be used in game designs to prevent early drop-off.
+	Their study provided valuable insights for designing more attractive games, but the playing manner they chose to study appears to be short-ranged for normal game players.
+	Although there are indeed many heavy players who could bear with a video game for more than 20 continuous hours, but that is not what the majority of the player group would do.
+	Especially among child players, the median of the play time could be at the level of one or two hours per day @MCG18.
+
+	=== Story-telling
+
+	It is well known that storytelling is a powerful element of video games, as addressed in Schell's book _The Art of Game Design: A Book of Lenses_ @Story.
+
+	_Alex Mitchell_ has proposed this very intuitive point in the book _The Digital Gaming Handbook_: #quote(block: false)[Once players 'get the good ending', they are unlikely to have much, if any, motivation to replay. Story-focused games, as opposed to more abstract games, tend to be seen as having limited replay value.] @Ale20
+	_Minecraft_, although being a sandbox game, does feature a "main story line".
+	That is, to enter the _End_ and slay the _Enderdragon_.
+
+	Even more, _Minecraft_'s native _hardcore_ mode features a "perma-death" (permanent-death) style of gameplay.
+	In Keogh's work in 2013, they stated that by adding this "perma-death" feature, the game's narrative weight is increased, leading to a more influential story-telling @Keo13.
+
+	With all these being said, due to its freedom on the mechanisms as a sandbox game, there could be so many different play styles that player could freely choose.
+	As a result, players don't really have to follow the official story line @o2016building.
+	Therefore, we need to explore topics beyond just story-telling.
+
+	=== Our Work
+
+	In this research, we want to focus on the engagement pattern towards _Minecraft_ that lasts at least _week-long_ and is cyclical.
+	Also, we want to explore a wider possibilities of the factors that may affect players' experience throughout the engagement cycle.
+	Following Creswell's guidance on selecting the research approach @creswell2017research, we decided to conduct a qualitative research to collect data directly from _Minecraft_ players.
 
 	= Method
 
@@ -119,18 +171,16 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	== Interview
 
-	#banner[The criteria for choosing the interviewees needs to be justified and clarified.]
-
 	After the survey data is collected, it is possible to analyze it and filter out a subset of players who have strong resonance with the phenomenon.
 	The research team then conduct one-to-one interviews with these selected players.
 	The interviews could either be online or in-person.
 
 	The main purpose of the interview stage is to find out the causes of the phenomenon by gathering subjective experiences from individual samples.
-	The gathered data is then be transcribed, coded, grouped into categories, analyzed and discussed.
+	The gathered data is then be transcribed, coded, grouped into categories for later analysis.
 
 	A table of interview questions could be found in the appendix section (@table:interview-questions).
 
-	= Analysis
+	== Analysis
 
 	The main form of analysis involved applying thematic analysis to data relating to our focus question: "What happened during the 2-week _Minecraft_ phase?"
 	This involved an inductive, systematic identification of emergent patterns from the interview and survey data relating to players' reasons for world abandonment and the factors that influenced their funnel through the "2-week _Minecraft_ phase".
@@ -155,132 +205,127 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	This yielded several important insights about the dynamics of _Minecraft_ engagement, including how updates, mods and multiplayer sessions all have different effects (and lengths) that cause the "2-week _Minecraft_ phase" to repeat itself.
 
-	= Interview Result
+	= Interview Results
 
-	#{
-		show heading.where(level: 3): set heading(numbering: none)
-		[
-			By analysing their responses in more than 25 in-depth interviews, recurring themes that cause players "break" their current worlds and create new ones could be identified.
-			These patterns relate to emotionality, the effects of game updates, multiplayer dynamics, and game mods (user-created additions to the game).
-			The interviews offer a nuanced understanding of the ways in which and why players cycle through these "2-week _Minecraft_ phases".
+	By analysing their responses in more than 25 in-depth interviews, recurring themes that cause players "break" their current worlds and create new ones could be identified.
+	These patterns relate to emotionality, the effects of game updates, multiplayer dynamics, and game mods (user-created additions to the game).
+	The interviews offer a nuanced understanding of the ways in which and why players cycle through these "2-week _Minecraft_ phases".
 
-			#let theme(body) = {
-				set text(size: 1em, weight: "bold");
-				body;
-			}
-
-			=== Attachment to Worlds and the Influence of Updates
-
-			Many players reported a strong sense of identification with the worlds they built in _Minecraft_, especially as their playtime had been considerable.
-			Players spoke about how they had crafted aquariums or architectural replicas in their worlds, or had simply engaged in just walking around to explore rare and unusual biomes.
-			One player said:
-
-			#quote[I get attached to every small thing in life, and _Minecraft_ worlds are no different.]
-
-			It prevented them from leaving such a world, particularly if they had built something particularly elaborate, or if they had accumulated in-game memories with other players.
-			One player explained:
-
-			#quote[If the map was fun to explore and I built a cool house or had a dog, I feel bad leaving it behind.]
-
-			Nonetheless, the vast majority of players said they would start a new world following a major _Minecraft_ update.
-			These updates usually implement new content (such as biomes, structure, or mechanics) which are difficult or impossible to find in the player's old world.
-			There wasn't an easy way to play with new content, so players said that it would take too long to reach new features if they stuck with their old world.
-			One player explained:
-
-			#quote[It's hard to find the new stuff that's added in the update in an already existing world. You have to travel out really far.]
-
-			It's always the desire of experiencing the latest features of the game that override any attachment to the old worlds (they quit).
-			The interviews showed that, despite the feeling of attachment to old worlds, players would quit them all the time for the sake of novelty.
-
-			=== Challenge and Hardcore Mode
-
-			If the players chose to play in hardcore mode, their approach to their worlds would be quite different from players who selected regular mode.
-			In hardcore mode, the world deletes upon death, making the experience more adventurous since your death is final.
-			Players in this mode said that they accepted the notion that they would lose it all if they died, saying:
-
-			#quote[If it's a hardcore world, I already know that if I die, I'm going to delete the world immediately.]
-
-			It encourages play of the "let's pretend" kind, with little emotional involvement and an attitude that, or "what's the worst that could happen?"
-			Their far more successful and persistent tendencies were more consonant with the raw masculinity celebrated by scholars _Dead Turk_ and _Steam Train Demon_.
-			Again and again, such players talked of making fresh hardcore worlds on an almost daily basis, dying within a few minutes at best of logging on to the new world.
-			One said:
-
-			#quote[My pattern is creating hardcore worlds, dying, and recreating them. I want to complete everything without dying, and if I can't, I start a new world.]
-
-			This cycle of world-building and -abandonment is fuelled by the competing impulses of needing to survive and needing to perfect, as players try to achieve 100 percent completion without losing their worlds.
-			In contrast to competitions, players who place greater value on creative expression and exploration would tend to stay in their worlds longer before abandoning their creations for newer versions or updates.
-
-			=== Multiplayer vs. Singleplayer Dynamics
-
-			The type of play (multiplayer or singleplayer) has a big influence on when and why players feel inclined to start new worlds.
-			For two-thirds of our respondents, singleplayer was perceived as the type of play that made it more probable they would restart worlds.
-			When playing alone, they had full editorial authority over their world, and they could walk away without affecting anyone else's experience.
-			One player explained:
-
-			#quote[I'm way more likely to start over in singleplayer because I don't have to worry about destroying the efforts of other players.]
-
-			This allows players to experiment, blow things up and, if they want to, restart as often as necessary.
-			In contrast to solo play, the multiplayer setting tends to prolong the life of a world.
-			Several players said that they feel they have to take care of the other players who share a server with them.
-			This made it harder for them to leave a world: #quote(block: false)[I feel somewhat responsible for the other guys on the server.]
-
-			#quote[In multiplayer, it's easier to stick around because you're part of a group.]
-
-			Multiplayer is also a committal factor:
-			The socializing and the cooperation can keep players producing in the same world even when they'd like to start again;
-			on the other hand, players can abandon feed-the-beast servers because some have lost interest and stopped playing, or are much further ahead in other ways.
-			We won't edit that last quote.
-
-			#quote[If people stop playing or progress too slowly, it kills the world.]
-
-			=== The Role of Mods and Customization
-
-			For many, the availability of mods or other customisation options becomes a major factor in determining when it's time to start over.
-			Mods add new mechanics, challenges and structures that players can relish and enjoy by starting anew.
-			One interviewee explained:
-
-			#quote[Mods play a very important part in starting a new world... There are so many great mods that change the game in a good way.]
-
-			Some mods, such as _Create_, add mechanical objects to the game;
-			others introduce a new biome, another a boss, another a dungeon, and so on, adding content for players to explore as they go.
-			Despite the option of modding, not every player uses mods as a supplement to the game or way of playing they have chosen.
-			Some players maintain that when it comes to _Minecraft_, less is more, and they're not interested in using mods.
-			The example of one player:
-
-			#quote[Mods don't influence my decision to make a new world---I'm not interested in non-vanilla stuff.]
-
-			This reflects the different ways in which modded and vanilla players have learned to respond to the actions or capabilities granted to them in _Minecraft_, giving rise to different styles of play.
-			These different playstyles also give rise to different responses to world-ending gameplay events---whether through resetting or carrying on.
-
-			=== Impact of Social Play and Community Engagement
-
-			Social interaction and community are key to whether players stay in a world of leave it.
-			Many said that making friends while they played was sometimes more important than the game itself. One player stated:
-
-			#quote[It's not the world itself that's hard to leave---it's the people I played with on that server.]
-
-			This investment in the social experience of the game can sustain a multiplayer world long after it would be abandoned in singleplayer:
-			Playing isn't just about progressing a world but about playing with friends, building a social experience.
-			But if, for example, friends leave, they will be more likely to leave the world in turn once the social group of the game starts to break up.
-			One player said:
-
-			#quote[Once the group stops playing, there's no point in sticking around. That's when I usually start a new world.]
-
-			=== Progression Milestones and the Desire for a Fresh Start
-
-			Several players reported having a common last hurrah, clearing "staircases" that mark hitting milestones (defeating the Ender Dragon; completing armor made of Netherite)---often the point at which they get bored of a world.
-			As another player put it:
-
-			#quote[Once I've done everything, it feels like time to start fresh.]
-
-			These players feel they have done what they need to do in this world once they reach these thresholds, and there is no sense in continuing the great toil in the same world because it is no longer "new"---novelty is still desired.
-			As another player commented:
-
-			#quote[After I've finished my main goal, like building a big project or getting all the advancements, I usually feel like it's time to move on.]
-
-			This cyclical nature of _Minecraft_ engagement is apparent when we consider that users begin with a huge drive to explore, build and go forward---eventually, they run out of interesting things to do and end up quitting and starting up a new world.
-		]
+	#let theme(body) = {
+		set text(size: 1em, weight: "bold");
+		body;
 	}
+
+	=== Attachment to Worlds and the Influence of Updates
+
+	Many players reported a strong sense of identification with the worlds they built in _Minecraft_, especially as their playtime had been considerable.
+	Players spoke about how they had crafted aquariums or architectural replicas in their worlds, or had simply engaged in just walking around to explore rare and unusual biomes.
+	One player said:
+
+	#quote[I get attached to every small thing in life, and _Minecraft_ worlds are no different.]
+
+	It prevented them from leaving such a world, particularly if they had built something particularly elaborate, or if they had accumulated in-game memories with other players.
+	One player explained:
+
+	#quote[If the map was fun to explore and I built a cool house or had a dog, I feel bad leaving it behind.]
+
+	Nonetheless, the vast majority of players said they would start a new world following a major _Minecraft_ update.
+	These updates usually implement new content (such as biomes, structure, or mechanics) which are difficult or impossible to find in the player's old world.
+	There wasn't an easy way to play with new content, so players said that it would take too long to reach new features if they stuck with their old world.
+	One player explained:
+
+	#quote[It's hard to find the new stuff that's added in the update in an already existing world. You have to travel out really far.]
+
+	It's always the desire of experiencing the latest features of the game that override any attachment to the old worlds (they quit).
+	The interviews showed that, despite the feeling of attachment to old worlds, players would quit them all the time for the sake of novelty.
+
+	=== Challenge and Hardcore Mode
+
+	If the players chose to play in hardcore mode, their approach to their worlds would be quite different from players who selected regular mode.
+	In hardcore mode, the world deletes upon death, making the experience more adventurous since your death is final.
+	Players in this mode said that they accepted the notion that they would lose it all if they died, saying:
+
+	#quote[If it's a hardcore world, I already know that if I die, I'm going to delete the world immediately.]
+
+	It encourages play of the "let's pretend" kind, with little emotional involvement and an attitude that, or "what's the worst that could happen?"
+	Their far more successful and persistent tendencies were more consonant with the raw masculinity celebrated by scholars _Dead Turk_ and _Steam Train Demon_.
+	Again and again, such players talked of making fresh hardcore worlds on an almost daily basis, dying within a few minutes at best of logging on to the new world.
+	One said:
+
+	#quote[My pattern is creating hardcore worlds, dying, and recreating them. I want to complete everything without dying, and if I can't, I start a new world.]
+
+	This cycle of world-building and -abandonment is fuelled by the competing impulses of needing to survive and needing to perfect, as players try to achieve 100 percent completion without losing their worlds.
+	In contrast to competitions, players who place greater value on creative expression and exploration would tend to stay in their worlds longer before abandoning their creations for newer versions or updates.
+
+	=== Multiplayer vs. Singleplayer Dynamics
+
+	The type of play (multiplayer or singleplayer) has a big influence on when and why players feel inclined to start new worlds.
+	For two-thirds of our respondents, singleplayer was perceived as the type of play that made it more probable they would restart worlds.
+	When playing alone, they had full editorial authority over their world, and they could walk away without affecting anyone else's experience.
+	One player explained:
+
+	#quote[I'm way more likely to start over in singleplayer because I don't have to worry about destroying the efforts of other players.]
+
+	This allows players to experiment, blow things up and, if they want to, restart as often as necessary.
+	In contrast to solo play, the multiplayer setting tends to prolong the life of a world.
+	Several players said that they feel they have to take care of the other players who share a server with them.
+	This made it harder for them to leave a world: #quote(block: false)[I feel somewhat responsible for the other guys on the server.]
+
+	#quote[In multiplayer, it's easier to stick around because you're part of a group.]
+
+	Multiplayer is also a committal factor:
+	The socializing and the cooperation can keep players producing in the same world even when they'd like to start again;
+	on the other hand, players can abandon feed-the-beast servers because some have lost interest and stopped playing, or are much further ahead in other ways.
+	We won't edit that last quote.
+
+	#quote[If people stop playing or progress too slowly, it kills the world.]
+
+	=== The Role of Mods and Customization
+
+	For many, the availability of mods or other customisation options becomes a major factor in determining when it's time to start over.
+	Mods add new mechanics, challenges and structures that players can relish and enjoy by starting anew.
+	One interviewee explained:
+
+	#quote[Mods play a very important part in starting a new world... There are so many great mods that change the game in a good way.]
+
+	Some mods, such as _Create_, add mechanical objects to the game;
+	others introduce a new biome, another a boss, another a dungeon, and so on, adding content for players to explore as they go.
+	Despite the option of modding, not every player uses mods as a supplement to the game or way of playing they have chosen.
+	Some players maintain that when it comes to _Minecraft_, less is more, and they're not interested in using mods.
+	The example of one player:
+
+	#quote[Mods don't influence my decision to make a new world---I'm not interested in non-vanilla stuff.]
+
+	This reflects the different ways in which modded and vanilla players have learned to respond to the actions or capabilities granted to them in _Minecraft_, giving rise to different styles of play.
+	These different playstyles also give rise to different responses to world-ending gameplay events---whether through resetting or carrying on.
+
+	=== Impact of Social Play and Community Engagement
+
+	Social interaction and community are key to whether players stay in a world of leave it.
+	Many said that making friends while they played was sometimes more important than the game itself. One player stated:
+
+	#quote[It's not the world itself that's hard to leave---it's the people I played with on that server.]
+
+	This investment in the social experience of the game can sustain a multiplayer world long after it would be abandoned in singleplayer:
+	Playing isn't just about progressing a world but about playing with friends, building a social experience.
+	But if, for example, friends leave, they will be more likely to leave the world in turn once the social group of the game starts to break up.
+	One player said:
+
+	#quote[Once the group stops playing, there's no point in sticking around. That's when I usually start a new world.]
+
+	=== Progression Milestones and the Desire for a Fresh Start
+
+	Several players reported having a common last hurrah, clearing "staircases" that mark hitting milestones (defeating the Ender Dragon; completing armor made of Netherite)---often the point at which they get bored of a world.
+	As another player put it:
+
+	#quote[Once I've done everything, it feels like time to start fresh.]
+
+	These players feel they have done what they need to do in this world once they reach these thresholds, and there is no sense in continuing the great toil in the same world because it is no longer "new"---novelty is still desired.
+	As another player commented:
+
+	#quote[After I've finished my main goal, like building a big project or getting all the advancements, I usually feel like it's time to move on.]
+
+	This cyclical nature of _Minecraft_ engagement is apparent when we consider that users begin with a huge drive to explore, build and go forward---eventually, they run out of interesting things to do and end up quitting and starting up a new world.
 
 	= Discussion
 
