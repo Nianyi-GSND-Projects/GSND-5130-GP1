@@ -185,12 +185,12 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 	The main form of analysis involved applying thematic analysis to data relating to our focus question: "What happened during the 2-week _Minecraft_ phase?"
 	This involved an inductive, systematic identification of emergent patterns from the interview and survey data relating to players' reasons for world abandonment and the factors that influenced their funnel through the "2-week _Minecraft_ phase".
 
-	Thematic analysis is employed on the data in two stages.
+	Thematic analysis was employed on the data in two stages.
 	The first stage involved coding the text into categories, according to the general types of player experience---For example, progression milestones; multiple-player relationships; affective bonds with worlds; and update/mod impacts.
 	The experiences in turn revealed a set of overarching themes, which were subject to a finer-grained thematic analysis.
 	By assessing the content of the responses, we looked more closely into the reasons why players engage in cyclical patterns of play.
 
-	The data were then rearranged into a set of key themes (e.g. attachment, updates-as-motivators, mods/customisation, and multiplayer versus singleplayer), which in turn generated sub-themes (e.g. the challenge of exploring remade worlds, and the social dynamics involved in keeping multiplayer engagement alive), which were then further analyzed and ordered into a matrix according to their frequency and intensity across the players.
+	The data was then rearranged into a set of key themes (e.g. attachment, updates-as-motivators, mods/customisation, and multiplayer versus singleplayer), which in turn generated sub-themes (e.g. the challenge of exploring remade worlds, and the social dynamics involved in keeping multiplayer engagement alive), which were then further analyzed and ordered into a matrix according to their frequency and intensity across the players.
 
 	The analysis commenced in the close reading of all the interview transcripts and survey results, where every transcript was read and re-read independently several times to gain a deep understanding of the participant's story.
 	Thereafter, codes were developed for all responses that pertained to meaningful player behaviors regarding the creation, abandonment and continuation of their _Minecraft_ worlds.
@@ -236,8 +236,8 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	#quote[It's hard to find the new stuff that's added in the update in an already existing world. You have to travel out really far.]
 
-	It's always the desire of experiencing the latest features of the game that override any attachment to the old worlds (they quit).
-	The interviews showed that, despite the feeling of attachment to old worlds, players would quit them all the time for the sake of novelty.
+	The desire of experiencing the latest features of the game tended to override attachment to the old worlds (they quit).
+	The interviews showed that, despite the feeling of attachment to old worlds, players had a high chance to quit them all the time for the sake of novelty.
 
 	=== Challenge and Hardcore Mode
 
@@ -248,7 +248,6 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 	#quote[If it's a hardcore world, I already know that if I die, I'm going to delete the world immediately.]
 
 	It encourages play of the "let's pretend" kind, with little emotional involvement and an attitude that, or "what's the worst that could happen?"
-	Their far more successful and persistent tendencies were more consonant with the raw masculinity celebrated by scholars _Dead Turk_ and _Steam Train Demon_.
 	Again and again, such players talked of making fresh hardcore worlds on an almost daily basis, dying within a few minutes at best of logging on to the new world.
 	One said:
 
@@ -365,7 +364,7 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 
 	= Conclusion
 
-	Qualitative survey and interview research supports the "2-week _Minecraft_ phase", indicating that abandonment of worlds follows the same cyclical pattern and is usually provoked by a similar set of factors after a period of intensive play.
+	Qualitative survey and interview research supports the "2-week _Minecraft_ phase", indicating that abandonment of worlds follows similar cyclical patterns and is usually provoked by a similar set of factors after a period of intensive play.
 	Many of these have to do with the fact that, while _Minecraft_'s sandbox-style gameplay enables creativity and exploration, it requires skills and design that can dry up after key goals are achieved via methods that are too simple.
 
 	One discovery was that worlds in singleplayer tended to be restarted more frequently, as there is no sustained social motivation when playing on your own. The multiplayer experience tends to extend the lifespan of the world, more often than not.
@@ -377,8 +376,8 @@ Our study examines the "2-week Minecraft phase" from psychological and social as
 	However, if players had stored wealth in older worlds, these world resets made it harder to access that new content---often leading to starting over.
 	In this way, _Minecraft_'s ever-evolving nature, through its weekly updates and its modding community, encouraged both player engagement and regular bouts of world resetting.
 
-	Taken together, the authors identify burnout, self-imposed goals and the prospect of new stuff as the main drivers of the cycle of engagement and disengagement. The authors also conclude that despite _Minecraft_'s "behemoth of a sandbox" that offers freedom and replayability, facilitating long-term engagement with the game will be an ongoing challenge.
-	I hope that greater recognition of the micro-dynamics presented by the survey will open up prospects for designing more enduring engagement in games that rely on activities created by players, such as open-world titles that offer freedom in exchange for players creating their own content.
+	Taken together, we've identifed burnout, self-imposed goals and the prospect of new content as the main drivers of the cycle of engagement and disengagement. We also conclude that despite _Minecraft_'s "behemoth of a sandbox" that offers freedom and replayability, facilitating long-term engagement with the game will be an ongoing challenge.
+	We hope that greater recognition of the micro-dynamics presented by the survey will open up prospects for designing more enduring engagement in games that rely on activities created by players, such as open-world titles that offer freedom in exchange for players creating their own content.
 	Possible enhancements include more targeted progression systems or other types of gameplay-based rewards.
 
 ]
