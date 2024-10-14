@@ -43,7 +43,7 @@
 		h(0.5em);
 	}
 	author(
-		name: [Alexandra Vassilopoulos],
+		name: [Alexander Vassilopoulos],
 		mail: "vassilopoulos.al@northeastern.edu",
 	);
 	author(
